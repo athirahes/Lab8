@@ -59,6 +59,8 @@ public class WordSorting implements Runnable {
 		Thread currentThread = Thread.currentThread();
 		String threadName = currentThread.getName();
 
+		System.out.println("Thread " + threadName + " is running...");
+		
 		// if threadName = text, then execute method b->extractTextPortion()
 		if (threadName == "text")
 			extractTextPortion();
@@ -66,6 +68,8 @@ public class WordSorting implements Runnable {
 		// if threadName = word1, then execute method c->randomizeWords()
 		else if (threadName == "word1" || threadName == "word2")
 			randomizeWords();
+		
+		System.out.println("Thread " + threadName + " is finished...\n");
 
 	}
 

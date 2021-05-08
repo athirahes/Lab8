@@ -11,7 +11,7 @@ public class WordSorting implements Runnable {
 	// overloaded method - display thread name & method's data in random order.
 	public void randomizeWords(String threadName) {
 
-		System.out.print(threadName + "-> Array Original order: ");
+		System.out.println(threadName + "-> Array Original order: ");
 
 		// Display the original order of the array's elements
 		for (int i = 0; i < word.length; i++)
@@ -21,7 +21,7 @@ public class WordSorting implements Runnable {
 		Collections.shuffle(Arrays.asList(word));
 
 		// Display the randomized order of the array's elements
-		System.out.print("\n\n" + threadName + "-> Array Randomized order: ");
+		System.out.println("\n\n" + threadName + "-> Array Randomized order: ");
 		for (int i = 0; i < word.length; i++) {
 
 			// implementation suspend for 5 seconds when a thread “word1” is executing.
@@ -74,6 +74,8 @@ public class WordSorting implements Runnable {
 		Thread currentThread = Thread.currentThread();
 		String threadName = currentThread.getName();
 
+		System.out.println("Thread " + threadName + " is running...");
+
 		// if threadName = text, then execute method b->extractTextPortion()
 		if (threadName == "text")
 			extractTextPortion();
@@ -81,6 +83,8 @@ public class WordSorting implements Runnable {
 		// if threadName = word1 or word2, then execute method c->randomizeWords()
 		else if (threadName == "word1" || threadName == "word2")
 			randomizeWords(threadName);
+		
+		System.out.println("Thread " + threadName + " is finished...\n");
 
 	}
 
