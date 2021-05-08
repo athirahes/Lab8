@@ -1,6 +1,6 @@
 package exercise3_ThreadSuspension;
 
-public class WordSortingApplication {
+public class ThreadSuspensionDemo {
 
 	public static void main(String[] args) {
 
@@ -24,8 +24,7 @@ public class WordSortingApplication {
 		thread3.start();
 		thread1.start();
 		thread2.start();
-		
-		
+			
 	}
 
 }

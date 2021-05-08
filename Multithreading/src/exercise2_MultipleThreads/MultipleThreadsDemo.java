@@ -1,6 +1,6 @@
 package exercise2_MultipleThreads;
 
-public class WordSortingApplication {
+public class MultipleThreadsDemo {
 
 	public static void main(String[] args) {
 

@@ -1,5 +1,6 @@
 package exercise1_SimpleMultithreading;
-public class StatementPrinterApplication {
+
+public class SimpleMultithreadingDemo {
 
 	public static void main(String[] args) {
 
